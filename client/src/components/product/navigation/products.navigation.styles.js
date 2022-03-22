@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { devices } from "../../../styles/breakpoints";
-import { StyledBtn } from "../../styles/styles/button.styles";
+import { StyledBtn } from "../../shared/styles/button.styles";
 
 export const SidebarNav = styled.nav`
   min-width: 25rem;

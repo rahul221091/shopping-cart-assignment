@@ -1,4 +1,4 @@
-import ContainerStyles from "../styles/styles/container.styles";
+import ContainerStyles from "../shared/styles/container.styles";
 import { FooterStyles } from "./footer.syles";
 
 const Footer = () => {

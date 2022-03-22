@@ -1,5 +1,5 @@
 import React from "react";
-import ContainerStyles from "../styles/styles/container.styles";
+import ContainerStyles from "../shared/styles/container.styles";
 import CartIconComponent from "../cart/cart-icon/cart.icon.components";
 import {
   HeaderMain,

@@ -4,7 +4,7 @@ import {
   CategorySub,
   CatDescription,
 } from "./category.styles";
-import { StyledLink } from "../../styles/styles/button.styles";
+import { StyledLink } from "../../shared/styles/button.styles";
 const CategoryComponent = (props) => {
   return (
     <CategoryItem isEven={props.index % 2}>

@@ -6,6 +6,7 @@ import HomePage from "./pages/homepage/homepage";
 import ProductsPage from "./pages/products-page/products-page";
 import SignInPage from "./pages/signin-page/signin";
 import RegisterPage from "./pages/register-page/register";
+import ErrorBoundary from "./components/error-boundary/error-boundary";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function App() {
@@ -13,12 +14,13 @@ function App() {
     <div>
       <Header></Header>
       <GlobalStyles />
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="/products/*" element={<ProductsPage />} />
-        <Route path="/signin" element={<SignInPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        {/* <Route exact path="/checkout" component={CheckoutPage} />
+      <ErrorBoundary>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="/products/*" element={<ProductsPage />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          {/* <Route exact path="/checkout" component={CheckoutPage} />
         <Route
           exact
           path="/signin"
@@ -30,7 +32,8 @@ function App() {
             )
           }
         /> */}
-      </Routes>
+        </Routes>
+      </ErrorBoundary>
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import FormInput from "../../components/styles/form-input/form-input";
-import ContainerStyles from "../../components/styles/styles/container.styles";
+import FormInput from "../../components/shared/form-input/form-input";
+import ContainerStyles from "../../components/shared/styles/container.styles";
 import { SiginCon, SignInHeader, SignInForm } from "./signin.style";
 import { SignInBtn } from "./signin.style";
 const SignInPage = (props) => {
@@ -15,6 +15,7 @@ const SignInPage = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
+
   return (
     <ContainerStyles>
       <SiginCon>

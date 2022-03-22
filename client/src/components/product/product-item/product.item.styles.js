@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledBtn } from "../../styles/styles/button.styles";
+import { StyledBtn } from "../../shared/styles/button.styles";
 import { devices } from "../../../styles/breakpoints";
 
 export const ProductItemGrid = styled.div`

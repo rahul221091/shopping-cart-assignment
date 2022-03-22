@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import FormInput from "../../components/styles/form-input/form-input";
-import ContainerStyles from "../../components/styles/styles/container.styles";
+import FormInput from "../../components/shared/form-input/form-input";
+import ContainerStyles from "../../components/shared/styles/container.styles";
 import {
   SignupCon,
   SignupHeader,
@@ -82,7 +82,7 @@ const RegisterPage = (props) => {
             minLength="6"
             handleChange={onPasswordChange}
             value={password}
-            pattern="^[a-zA-Z0-9]+$"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
             required
           />
           <FormInput

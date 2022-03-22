@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { useSelector } from "react-redux";
-import Modal from "../../styles/modal/modal.component";
+import Modal from "../../shared/modal/modal.component";
 import { selectTotalCartItemsCount } from "../../../redux/cart/cart.select";
 import { StyledCartIcon, CartIconImg } from "./cart.icon.styles";
 import CartDetailsComponent from "../cart-details/cart-details.component";

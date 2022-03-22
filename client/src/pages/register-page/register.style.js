@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledBtn } from "../../components/styles/styles/button.styles";
+import { StyledBtn } from "../../components/shared/styles/button.styles";
 import { devices } from "../../styles/breakpoints";
 
 export const SignupCon = styled.div`

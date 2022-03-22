@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledLink } from "../../styles/styles/button.styles";
+import { StyledLink } from "../../shared/styles/button.styles";
 
 export const CartHeaderLabel = styled.h2`
   span {
