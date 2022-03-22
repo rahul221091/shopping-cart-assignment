@@ -20,6 +20,7 @@ export const CartItemImg = styled.img`
 
 export const ItemCountModifier = styled.div`
   display: flex;
+  align-items: center;
   gap: 2rem;
   [data-icon]:before {
     font-family: icons; /* BYO icon font, mapped smartly */

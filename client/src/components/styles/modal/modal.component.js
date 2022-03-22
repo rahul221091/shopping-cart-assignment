@@ -14,7 +14,7 @@ const Modal = (props) => {
   }, []);
   return props.open
     ? ReactDOM.createPortal(
-        <ModalOverlay>
+        <ModalOverlay onClick={props.onClose}>
           <ModalBody>{props.children}</ModalBody>
         </ModalOverlay>,
         document.getElementById("modal")

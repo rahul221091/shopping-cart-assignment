@@ -13,7 +13,7 @@ const CartItemComponent = (props) => {
   return (
     <CartItemCon>
       <CartItemImg src={imageURL} alt={name} />
-      <h2>{name}</h2>
+      <h3>{name}</h3>
       <TotalItemCost>{`Rs.${price * count}`}</TotalItemCost>
       <ItemCountModifier>
         <CartItemBtn
