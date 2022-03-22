@@ -1,13 +1,16 @@
 import React from "react";
 import ContainerStyles from "../styles/styles/container.styles";
 import CartIconComponent from "../cart/cart-icon/cart.icon.components";
-import { Link } from "react-router-dom";
 import {
   HeaderMain,
   HeaderContainer,
+  LogoLink,
   Logo,
   LinkCon,
   NavLink,
+  HeaderLeft,
+  SecLinkCon,
+  SecLink,
 } from "./header.styles";
 
 const Header = (props) => {
@@ -15,14 +18,20 @@ const Header = (props) => {
     <HeaderMain>
       <ContainerStyles>
         <HeaderContainer>
-          <Link to="/">
+          <LogoLink to="/">
             <Logo src="/static/images/logo.png" alt="Logo" />
-          </Link>
+          </LogoLink>
           <LinkCon>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/products">Products</NavLink>
           </LinkCon>
-          <CartIconComponent />
+          <HeaderLeft>
+            <SecLinkCon>
+              <SecLink to="/signin">SignIn</SecLink>
+              <SecLink to="/register">Register</SecLink>
+            </SecLinkCon>
+            <CartIconComponent />
+          </HeaderLeft>
         </HeaderContainer>
       </ContainerStyles>
     </HeaderMain>
