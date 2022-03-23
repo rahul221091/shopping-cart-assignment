@@ -24,10 +24,13 @@ export const FormInputStyles = styled.input`
   border: none;
   border-radius: 0;
   border-bottom: 0.2rem solid #acacac;
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 0 0;
   &:focus {
     outline: none;
     border-bottom: 0.2rem solid #5cb7c2;
+    &[aria-invalid="true"] {
+      border-bottom: 0.2rem solid #f00;
+    }
   }
   &:focus ~ label {
     ${shrinkLabelStyles}
@@ -45,5 +48,13 @@ export const FormInputLabel = styled.label`
   transition: 300ms ease all;
   &.shrink {
     ${shrinkLabelStyles}
+    &[data-invalid="true"] {
+      color: #f00;
+    }
   }
+`;
+
+export const ErrorMsg = styled.span`
+  color: #f00;
+  font-size: 1.4rem;
 `;

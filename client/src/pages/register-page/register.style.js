@@ -14,9 +14,10 @@ export const SignupCon = styled.div`
 `;
 
 export const SignupHeader = styled.div`
-  margin-right: 3rem;
+  margin-right: 4.5rem;
   margin-top: 4.5rem;
   @media ${devices.mobile} {
+    margin-right: 0;
     * {
       text-align: center;
     }

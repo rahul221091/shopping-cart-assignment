@@ -6,14 +6,35 @@ import { SignInBtn } from "./signin.style";
 const SignInPage = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errObj, setErrorObj] = useState({});
   const onEmailChange = (event) => {
     setEmail(event.target.value);
   };
   const onPasswordChange = (event) => {
     setPassword(event.target.value);
   };
+
+  const checkValidity = () => {
+    let isValid = true;
+
+    errObj["email"] = "";
+    if (!email) {
+      isValid = false;
+      errObj["email"] = "Please enter valid email address";
+    }
+
+    errObj["password"] = "";
+    if (!password) {
+      isValid = false;
+      errObj["password"] = "Password does not match with the pattern";
+    }
+    setErrorObj({ ...errObj });
+    return isValid;
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    checkValidity();
   };
 
   return (
@@ -27,16 +48,18 @@ const SignInPage = (props) => {
           <FormInput
             type="email"
             label="Email"
+            id="email"
             handleChange={onEmailChange}
             value={email}
-            required
+            error={errObj["email"]}
           />
           <FormInput
             type="password"
             label="Password"
+            id="password"
             handleChange={onPasswordChange}
             value={password}
-            required
+            error={errObj["password"]}
           />
           <SignInBtn type="submit">Login</SignInBtn>
         </SignInForm>

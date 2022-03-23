@@ -15,7 +15,9 @@ export const SiginCon = styled.div`
 
 export const SignInHeader = styled.div`
   margin-top: 4.5rem;
+  margin-right: 4.5rem;
   @media ${devices.mobile} {
+    margin-right: 0;
     * {
       text-align: center;
     }
