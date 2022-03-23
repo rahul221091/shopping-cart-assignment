@@ -26,6 +26,7 @@ export const ModalBackdrop = styled.div`
 export const ModalBody = styled.div`
   background-color: #fff;
   max-width: 60%;
+  z-index: 999;
   @media ${devices.tablet} {
     max-width: 80%;
   }
