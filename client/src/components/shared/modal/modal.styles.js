@@ -15,6 +15,14 @@ export const ModalOverlay = styled.div`
   z-index: 999;
 `;
 
+export const ModalBackdrop = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
 export const ModalBody = styled.div`
   background-color: #fff;
   max-width: 60%;

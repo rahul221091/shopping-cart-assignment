@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
-import { ModalBody, ModalOverlay } from "./modal.styles";
+import { ModalBody, ModalOverlay, ModalBackdrop } from "./modal.styles";
 
 const Modal = (props) => {
   useEffect(() => {
@@ -14,7 +14,8 @@ const Modal = (props) => {
   }, []);
   return props.open
     ? ReactDOM.createPortal(
-        <ModalOverlay onClick={props.onClose}>
+        <ModalOverlay>
+          <ModalBackdrop onClick={props.onClose} />
           <ModalBody>{props.children}</ModalBody>
         </ModalOverlay>,
         document.getElementById("modal")

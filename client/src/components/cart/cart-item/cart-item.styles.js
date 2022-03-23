@@ -8,7 +8,7 @@ export const CartItemCon = styled.li`
   grid-template-columns: min-content auto min-content;
   grid-template-rows: auto auto;
   grid-gap: 1rem 2rem;
-  h2 {
+  h3 {
     text-align: start;
   }
 `;
